@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sign up</title>
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: auto;
+  width:50%;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%; 
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=password] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+  margin-top:5px;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="myfilter" method="Post">
+      
+        <div class="row">
+          <div class="col-50">
+            <h1>Account creating form</h1>
+            <label for="fname"><i class="fa fa-user"></i> User name</label>
+            <input type="text" id="fname" name="username" placeholder="John M. Doe" required>
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@gmail.com" required>
+            <label for="adr"><i class="fa fa-address-card-o"></i> AadarID number</label>
+            <input type="text" id="adr" name="Aid" placeholder="12345016789" required>
+            <label for="city"><i class="fa fa-phone"></i> Phone number</label>
+            <input type="text" id="city" name="phonenumber" placeholder="7094969783"required>
+             <label for="gender"> Select you gender</label>
+             <select name="gender" id="email" style="height: 30px;width: 230px;">
+	         <option value="male">Male</option>
+	         <option value="female">Female</option>
+	         <option value="other">other</option>
+             </select><br><br>
+               <label for="birthday">Date of birth</label>
+               <input type="date" id="birthday" name="dob" style="height:32px;width:230px" required>
+               <br><br>
+               <label for="password">Password</label>
+            <input type="password" name="password" id="myInput" placeholder="............" required><br>
+            <input type="checkbox" onclick="myFunction()">Show Password
+            <br><br>
+            <label for="password">Confirm Password</label>
+            <input type="password" name="confirmpassword" id="input" placeholder="............" required><br>
+            <input type="checkbox" onclick="Function()">Show Password
+            <br><br>
+            <label for="city" style="display:none;"><i class="fa fa-coins"></i>Credit your first deposit (minimum amount 1000rs)</label>
+            <input type="text" id="city" name="firstdeposit" placeholder="1000$" style="display:none;">
+          </div> 
+        </div>
+        
+        <div style="margin-top:10px">
+        <input type="submit" value="Submit" class="btn">
+         </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+function Function() {
+  var x = document.getElementById("input");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+</script>
+</body>
+</html>
