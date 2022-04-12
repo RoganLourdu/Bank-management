@@ -7,8 +7,8 @@ import javax.mail.PasswordAuthentication;
 
 public class Mail {
     public static boolean SendMail(String to, String subject, String msg_body) {
-        String from="********************************";
-        String pass="*****************************";
+        String from="Your gmail id ";
+        String pass="Your password";
         boolean mail_status=false;
         Properties props=new Properties();
         props.put("mail.smtp.host","smtp.gmail.com");
